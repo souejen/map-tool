@@ -1,0 +1,76 @@
+{
+	"info": {
+		"_postman_id": "dd856066-76d8-4796-990d-e52d471892a3",
+		"name": "api-sample",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "19871885"
+	},
+	"item": [
+		{
+			"name": "Coordinates",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"latitude\": 58.1441560,\r\n    \"longitude\": -2.1148642\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:8090/api/postal-codes/AB10 6RN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"postal-codes",
+						"AB10 6RN"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "Distance",
+			"request": {
+				"auth": {
+					"type": "noauth"
+				},
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:8090/api/distance?postcode1=AB10 1XG&postcode2=AB10 6RN",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "8090",
+					"path": [
+						"api",
+						"distance"
+					],
+					"query": [
+						{
+							"key": "postcode1",
+							"value": "AB10 1XG"
+						},
+						{
+							"key": "postcode2",
+							"value": "AB10 6RN"
+						}
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
